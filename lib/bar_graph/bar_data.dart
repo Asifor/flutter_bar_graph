@@ -1,3 +1,5 @@
+import 'package:flutter_bar_graph/bar_graph/individual_bar.dart';
+
 class BarData {
   final double sunAmount;
   final double monAmount;
@@ -15,4 +17,26 @@ class BarData {
       required this.thurAmount,
       required this.friAmount,
       required this.satAmount});
+
+  List<IndividualBar> barData = [];
+
+  // initialize bar data
+  void initializeBarData() {
+    barData = [
+      // sun
+      IndividualBar(x: 0, y: sunAmount),
+      // mon
+      IndividualBar(x: 0, y: monAmount),
+      // tue
+      IndividualBar(x: 0, y: tueAmount),
+      // wed
+      IndividualBar(x: 0, y: wedAmount),
+      // thur
+      IndividualBar(x: 0, y: thurAmount),
+      // fri
+      IndividualBar(x: 0, y: friAmount),
+      // sat
+      IndividualBar(x: 0, y: satAmount),
+    ]
+  }
 }
