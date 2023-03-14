@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 /* 
 TASK!
 
-Input: List of weekly expenses = [sunAmount, monAmount, tueAmount, wedAmount, thuAmount, friAmount, satAmount]
+Input: List of weekly expenses = [sunAmount, monAmount, tueAmount, wedAmount, thurAmount, friAmount, satAmount]
 
 Output: Display input in a bar graph
 
