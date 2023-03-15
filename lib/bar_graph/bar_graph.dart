@@ -29,6 +29,12 @@ class MyBarGraph extends StatelessWidget {
         minY: 0,
         gridData: FlGridData(show: false),
         borderData: FlBorderData(show: false),
+        titlesData: FlTitlesData(
+          topTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          rightTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: true)),
+          bottomTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+        ),
         barGroups: myBarData.barData
             .map(
               (data) => BarChartGroupData(
