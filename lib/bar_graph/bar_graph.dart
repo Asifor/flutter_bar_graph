@@ -36,6 +36,7 @@ class MyBarGraph extends StatelessWidget {
                     toY: data.y,
                     color: Colors.grey[800],
                     width: 25,
+                    borderRadius: BorderRadius.circular(5),
                   ),
                 ],
               ),
