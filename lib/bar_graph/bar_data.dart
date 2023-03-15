@@ -37,6 +37,6 @@ class BarData {
       IndividualBar(x: 0, y: friAmount),
       // sat
       IndividualBar(x: 0, y: satAmount),
-    ]
+    ];
   }
 }
