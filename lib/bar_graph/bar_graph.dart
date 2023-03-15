@@ -35,7 +35,12 @@ class MyBarGraph extends StatelessWidget {
             sideTitles: SideTitles(reservedSize: 40, showTitles: true),
           ),
           rightTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
-          bottomTitles: getBottomTitles,
+          bottomTitles: AxisTitles(
+            sideTitles: SideTitles(
+              showTitles: true,
+              getTitlesWidget: getBottomTitles,
+            ),
+          ),
         ),
         barGroups: myBarData.barData
             .map(
@@ -93,5 +98,9 @@ Widget getBottomTitles(double value, TitleMeta meta) {
       text = const Text('S', style: style);
       break;
     default:
+      text = const Text('', style: style);
+      break;
   }
+
+  return SideTitleWidget(child: text, axisSide: meta.axisSide);
 }
