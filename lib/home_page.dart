@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'bar_graph/bar_graph.dart';
 
 /* 
 TASK!
@@ -30,6 +31,13 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(
+      body: Center(
+        child: SizedBox(
+          height: 400,
+          child: MyBarGraph(),
+        ),
+      ),
+    );
   }
 }
