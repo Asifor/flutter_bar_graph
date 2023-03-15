@@ -31,9 +31,11 @@ class MyBarGraph extends StatelessWidget {
         borderData: FlBorderData(show: false),
         titlesData: FlTitlesData(
           topTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          leftTitles: AxisTitles(
+            sideTitles: SideTitles(reservedSize: 40, showTitles: true),
+          ),
           rightTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
-          leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: true)),
-          bottomTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          bottomTitles: getBottomTitles,
         ),
         barGroups: myBarData.barData
             .map(
@@ -57,5 +59,39 @@ class MyBarGraph extends StatelessWidget {
             .toList(),
       ),
     );
+  }
+}
+
+Widget getBottomTitles(double value, TitleMeta meta) {
+  const style = TextStyle(
+    color: Colors.grey,
+    fontWeight: FontWeight.bold,
+    fontSize: 14,
+  );
+
+  Widget text;
+  switch (value.toInt()) {
+    case 0:
+      text = const Text('S', style: style);
+      break;
+    case 1:
+      text = const Text('M', style: style);
+      break;
+    case 2:
+      text = const Text('T', style: style);
+      break;
+    case 3:
+      text = const Text('W', style: style);
+      break;
+    case 4:
+      text = const Text('T', style: style);
+      break;
+    case 5:
+      text = const Text('F', style: style);
+      break;
+    case 6:
+      text = const Text('S', style: style);
+      break;
+    default:
   }
 }
