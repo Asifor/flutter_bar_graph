@@ -26,17 +26,17 @@ class BarData {
       // sun
       IndividualBar(x: 0, y: sunAmount),
       // mon
-      IndividualBar(x: 0, y: monAmount),
+      IndividualBar(x: 1, y: monAmount),
       // tue
-      IndividualBar(x: 0, y: tueAmount),
+      IndividualBar(x: 2, y: tueAmount),
       // wed
-      IndividualBar(x: 0, y: wedAmount),
+      IndividualBar(x: 3, y: wedAmount),
       // thur
-      IndividualBar(x: 0, y: thurAmount),
+      IndividualBar(x: 4, y: thurAmount),
       // fri
-      IndividualBar(x: 0, y: friAmount),
+      IndividualBar(x: 5, y: friAmount),
       // sat
-      IndividualBar(x: 0, y: satAmount),
+      IndividualBar(x: 6, y: satAmount),
     ];
   }
 }
