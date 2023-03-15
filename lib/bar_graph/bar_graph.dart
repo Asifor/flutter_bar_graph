@@ -25,14 +25,17 @@ class MyBarGraph extends StatelessWidget {
 
     return BarChart(
       BarChartData(
-        maxY: 200,
+        maxY: 100,
         minY: 0,
         barGroups: myBarData.barData
             .map(
               (data) => BarChartGroupData(
                 x: data.x,
                 barRods: [
-                  BarChartRodData(toY: data.y),
+                  BarChartRodData(
+                    toY: data.y,
+                    color: Colors.grey[800],
+                  ),
                 ],
               ),
             )
