@@ -35,6 +35,7 @@ class MyBarGraph extends StatelessWidget {
                   BarChartRodData(
                     toY: data.y,
                     color: Colors.grey[800],
+                    width: 25,
                   ),
                 ],
               ),
